@@ -1,0 +1,436 @@
+
+@font-face {
+    font-family: NavFont;
+    src: url(Assets/Fonts/Some.ttf);
+}
+
+
+@font-face {
+    font-family: logoFont;
+    src: url(Assets/Fonts/NorteaaTallHand.ttf);
+}
+
+@font-face {
+    font-family: subTxtFont;
+    src: url(Assets/Fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+@font-face {
+    font-family: MainFont;
+    src: url(Assets/Fonts/NorteaaTallHand.ttf);
+}
+/*======== BOILER PLATE  ========*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+} 
+
+body,html{
+
+    width: 100%;
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgb(1, 1, 1);
+    
+ 
+}
+
+
+
+
+
+/* ===== FRONT UI CODE ===== */
+
+
+.frontUi{
+
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(0, 0, 0, 0.25)), url(Assets/testx3.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+
+}
+
+
+/* ===== NAV CODE ===== */
+
+
+.nav{
+
+    display: flex;
+    width: auto;
+    height: 12vh;
+    margin: 0 10%;
+    padding-top: 2%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navList ul{
+
+    display: flex;
+    gap: 7vw;
+    list-style: none;
+    text-shadow: 1px 1px 5px black;
+    align-items: center;
+}
+
+.navList ul li a{
+
+    color: white;
+    text-decoration: none;
+    font-size: 1.7vw;
+    letter-spacing: 6px;
+    font-weight: 500;
+   /* text-transform: uppercase;*/
+    font-family: NavFont;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 1s;
+  
+}
+
+
+.navList ul li a::after{
+
+    content: '';
+    position: absolute;
+    background-color: rgb(17, 204, 204);
+    width: 100%;
+    height: .3vh;
+    left: 0;
+    bottom: -3%;
+    /* Bottom line animation */
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: all .5s; 
+    
+}
+
+.navList ul li a:hover::after{
+
+    transform: scale(1,1);
+}
+
+.navList ul li a:hover{
+
+    color: rgb(17, 204, 204);
+
+}
+
+.logo a{
+
+    font-size: 5vw;
+    font-weight: 550 ;
+    letter-spacing: 6px;
+    color: white;
+    font-family:  logoFont;
+    cursor: none;
+    text-shadow: 10px 10px 20px rgba(255, 255, 255, 0.308);
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.logo a:hover{
+
+    color: rgb(17, 204, 204);
+    
+}
+
+::selection{
+
+    color: rgb(17, 204, 204);
+    background-color: rgba(0, 0, 0, 0.627);
+}
+
+/* ===== MAIN FRONT UI CODE ===== */
+
+.frontUi-main{
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 72%;
+    position: relative;
+    gap: 50px;
+
+
+}
+
+.frontUi-main-cont{
+
+    color: white;
+    height: 100%;
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.fCont{
+
+    height: 100%;
+    width: 96%;
+}
+
+
+.frontUi-main-cont h1{
+
+    font-size: 7vw;
+    font-family: MainFont;
+    font-weight: 100;
+    text-shadow: 15px 15px 30px black;
+    text-align: center;
+    cursor: none;
+}
+
+.frontUi-main-cont p{
+
+    font-size: 1.4vw;
+    font-family: subTxtFont;
+    text-shadow: 15px 15px 30px black;
+    margin: 0 30%;
+    text-align: center;
+    font-weight: 500;
+    cursor: none;
+
+}
+
+.frontUi-scroll-i{
+
+    color: white;
+    position: relative;
+    font-size: 1.3vw;
+    text-align: center;
+    margin-top: 3%;
+    font-family: NavFont;
+    letter-spacing: 5px;
+    font-weight: bold;
+    cursor: none;
+}
+
+/*OTHERS*/
+
+.navList  .icon{
+
+    display: none;
+}
+
+
+.cursor{
+
+    width: 40px;
+    height: 40px;
+    top: -50px;
+    background-color: rgba(1, 153, 153, 0.341);
+    border-radius: 50%;
+    border: 2px solid aquamarine;
+    position: absolute;
+    z-index: 999;
+    transition: all .3s cubic-bezier(.34,.58,.48,.7);
+}
+
+/* ===== RESPONSIVE CODE {980} ===== */
+
+@media(max-width: 980px){
+
+
+/* ===== NAV CODE ===== */
+    
+.logo a{
+
+    font-size: 14vw;
+}
+.navList .icon{
+
+    display: block;
+    font-size: 5vw;
+    text-shadow: 1px 1px 10px black;
+    color: white;
+}
+
+.nav{
+
+    padding-top: 10%;
+    position: relative;
+}
+
+.navList ul li a{
+
+    display: none;
+}
+
+/* ===== FRONT UI  CODE ===== */
+    .frontUi-main-cont h1{
+
+        font-size: 15vw;
+        text-shadow: 15px 15px 30px black;
+
+    }
+
+    .fCont{
+
+        height: 100%;
+        width: 40%;
+    }
+    
+    
+
+    .frontUi-main-cont p{
+    
+        font-size: 2.8vw;
+        text-shadow: 15px 15px 30px black;
+        margin: 0 33%;
+        font-weight: 500;
+    
+    }
+
+    #fP{
+
+        margin: 0 15% !important;
+    }
+    
+    .frontUi-scroll-i{
+    
+       
+        font-size: 3vw;
+        margin-top: 3%;
+        letter-spacing: 5px;
+        
+    }
+
+    
+/* ===== XPAND FUNCTIONALITY ===== */
+    
+    .xpand{
+
+        background-color: /*rgba(18, 185, 185, 0.703)*/ rgba(2, 126, 142, 0.779);
+        margin: 0;
+        position: fixed;
+        z-index: 99;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    
+        
+    }
+
+    .xpand .logo{
+
+        display: none;
+    }
+
+   
+
+    .xpand .navList ul li a{
+
+        display: block;
+        font-size: 8vw;
+        text-shadow: 1px 1px 10px black;
+        
+    }
+
+    .xpand .navList ul{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vh;
+        
+    }
+    .xpand .navList ul .icon{
+
+        position: fixed;
+        top: -63%;
+        right: -220%;
+        
+      
+       
+    }
+
+    .rl{
+
+        display: none;
+    }
+}
+
+
+/* ===== RESPONSIVE CODE{425PX} ===== */
+
+@media(max-width: 426px){
+
+    
+/* ===== NAV CODE ===== */
+    
+.logo a{
+
+    font-size: 16vw;
+}
+.navList .icon{
+
+  font-size: 6vw;
+
+}
+
+.nav{
+
+    padding-top: 10%;
+}
+
+/* ===== FRONT UI  CODE ===== */
+.frontUi-main-cont h1{
+
+    font-size: 18vw;
+
+}
+
+.fCont{
+
+    width: 25%;
+   
+}
+
+.frontUi-main-cont p{
+
+    font-size: 4.2vw;
+    margin: 0 35%;
+ 
+
+}
+#fP{
+
+    margin: 0 10% !important;
+}
+
+.frontUi-scroll-i{
+
+   
+    font-size: 4vw;
+    margin-top: 3%;
+    letter-spacing: 5px;
+    
+}
+
+.xpand .navList ul .icon{
+
+    position: absolute;
+    top: -63%;
+    right: -163%;
+    margin-left: 4%;
+   
+}
+
+}

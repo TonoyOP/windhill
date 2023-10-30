@@ -1,0 +1,128 @@
+@font-face {
+    font-family: logoFont;
+    src: url(Assets/Fonts/NorteaaTallHand.ttf);
+}
+
+@font-face {
+    font-family: subTxtFont;
+    src: url(Assets/Fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+/*======== BOILER PLATE  ========*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+} 
+
+body,html{
+
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+
+}
+
+::selection{
+
+    color: rgb(17, 204, 204);
+    background-color: rgba(0, 0, 0, 0.508);
+}
+
+.main{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(rgba(17, 204, 204, 0.138), rgba(0, 0, 0, 0.648)), url(Assets/LBgx.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: all 1s;
+    position: relative;
+    
+}
+
+.LoaderTxt{
+
+    color: white;
+    font-size: 15vw;
+    font-family: logoFont;
+    letter-spacing: 5px;
+    font-weight: 100;
+    cursor: grab;
+    text-shadow: 2px 2px 30px black;
+}
+
+.LoaderBtn a{
+
+    font-size: 2vw;
+    font-family: subTxtFont;
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+    padding: 2px 50px;
+    border-radius: 50px;
+    border: 3px solid white;
+    transition: all .5s;
+
+
+}
+
+.LoaderBtn a:hover{
+
+    color: rgb(17, 204, 204);
+    border: 3px solid rgb(17, 204, 204);
+}
+
+.cursor{
+
+    width: 40px;
+    height: 40px;
+    top: -50px;
+    background-color: rgb(7, 146, 146);
+    border-radius: 50%;
+    border: 2px solid aquamarine;
+    position: absolute;
+    transition: all .4s cubic-bezier(.34,.58,.48,.7);
+}
+
+@media(max-width: 980px){
+
+    .LoaderTxt{
+     
+        font-size: 20vw;
+        letter-spacing: 5px;
+    
+    }
+    
+    .LoaderBtn a{
+    
+        font-size: 4vw;
+    
+    }
+    
+}
+
+@media(max-width: 425px){
+
+    .LoaderTxt{
+     
+        font-size: 24vw;
+        letter-spacing: 5px;
+    
+    }
+    
+    .LoaderBtn a{
+    
+        font-size: 6vw;
+    
+    }
+    
+}
